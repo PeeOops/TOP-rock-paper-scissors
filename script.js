@@ -6,4 +6,10 @@ function getComputerChoice () {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-console.log(getComputerChoice());
+// Human Choice Input
+function getHumanChoice () {
+    let input = prompt("Choice :");
+    return input;
+}
+
+console.log(getHumanChoice());
