@@ -1,37 +1,36 @@
 
-
-
-// Randomize computer choice
-function getComputerChoice () {
-    let choices = ["Rock", "Paper", "Scissors"];
-    
-    return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// Human Choice Input
-function getHumanChoice () {
-    let input = prompt("Choice :");
-    return input;
-}
-
-
-
-const humanSelective = getHumanChoice();
-const computerSelective = getComputerChoice();
-
-    
 // Declare player scores
 let humanScore = 0;
 let computerScore = 0;
+let round = 0;
 
 
 function playGame(){
+
+    round++;
+
+    // Randomize computer choice
+    function getComputerChoice () {
+        let choices = ["Rock", "Paper", "Scissors"];
+        
+        return choices[Math.floor(Math.random() * choices.length)];
+    }
+
+    // Human Choice Input
+    function getHumanChoice () {
+        let input = prompt("Choice :");
+        return input;
+    }
+
+    const humanSelective = getHumanChoice();
+    const computerSelective = getComputerChoice();
+    
     // Single Round
     function playRound (humanChoice, computerChoice) {
         let human = humanChoice.toLowerCase();
         let computer = computerChoice.toLowerCase();
-        let round = 1;
-
+        
+        console.log("===============================");
         console.log("Round: " + round);
         console.log("You : " + human);
         console.log("Computer : " + computer);
@@ -56,22 +55,18 @@ function playGame(){
     return playRound(humanSelective, computerSelective);
 }
 
-playGame();
+// Loop
+for(let i = 0; i < 5; i++){
+    playGame();
+}
 
+// Gameover
+if (round === 5){
+    console.log("===============================");
+    if(humanScore > computerScore){
+        console.log("You win!! Your score is " + humanScore);
+    }else{
+        console.log("You lose!! Computer score is " + computerScore);
+    }
+}
 
-
-
-
-// // GameOver
-//     for(let i = 0; i <= 5; i++){
-//         playRound(humanSelective, computerSelective);
-//     }
-
-
-// if (round === 5){
-//     if(humanScore > computerScore){
-//         console.log("You Win! Score : " + humanScore);
-//     }else{
-//         console.log("You Lose! Score: " + computerScore);
-//     }
-// }
