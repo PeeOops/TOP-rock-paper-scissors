@@ -1,6 +1,4 @@
-// Declare player scores
-let humanScore = 0;
-let computerScore = 0;
+
 
 
 // Randomize computer choice
@@ -18,6 +16,13 @@ function getHumanChoice () {
 
 const humanSelective = getHumanChoice();
 const computerSelective = getComputerChoice();
+
+    
+// Declare player scores
+let humanScore = 0;
+let computerScore = 0;
+let round = 1;
+
 
 // Single Round
 function playRound (humanChoice, computerChoice) {
@@ -37,8 +42,21 @@ function playRound (humanChoice, computerChoice) {
         console.log("It's a draw!");
     }else{
         console.log("You Win! " + human + " beats " + computer);
-        human++;
+        humanScore++;
     }
 }
 
-playRound(humanSelective, computerSelective);
+
+// GameOver
+    for(let i = 0; i <= 5; i++){
+        playRound(humanSelective, computerSelective);
+    }
+
+
+if (round === 5){
+    if(humanScore > computerScore){
+        console.log("You Win! Score : " + humanScore);
+    }else{
+        console.log("You Lose! Score: " + computerScore);
+    }
+}
