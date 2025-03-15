@@ -16,4 +16,25 @@ function getHumanChoice () {
     return input;
 }
 
-console.log(getHumanChoice());
+const humanSelective = getHumanChoice();
+const computerSelective = getComputerChoice();
+
+// Single Round
+function playRound (humanChoice, computerChoice) {
+    let human = humanChoice.toLowerCase();
+    let computer = computerChoice.toLowerCase();
+
+    if (human === "rock" && computer === "paper"){
+        console.log("You Lose! Paper beats Rock");
+    }else if(human === "paper" && computer === "scissors"){
+        console.log("You Lose! Scissors beats Paper");
+    }else if(human === "scissors" && computer === "rock"){
+        console.log("You Lose! Rock beats Scissors");
+    }else if(human === computer) {
+        console.log("It's a draw!");
+    }else{
+        console.log("You Win! " + human + " beats " + computer)
+    }
+}
+
+playRound(humanSelective, computerSelective);
