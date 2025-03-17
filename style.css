@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+    height: 100vh;
+}
+
+.box{
+    background-color: white;
+    border: 3px solid black;
+    width: 500px;
+    padding: 15px 30px 15px 30px;
+    font-family: "Roboto", sans-serif;
+    margin: 25px auto;
+}
+
+.game, .gameover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game p, .gameover p{
+    font-size: 18px;
+}
+
+
+.game .round{
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.choices{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.choices button, .result-button, .restart{
+    background-color: gray;
+    color: white;
+    border: none;
+    font-size: 28px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.result-button{
+    display: none;
+}
+
+
+.button-show{
+    display: block;
+}
+
+.player, .computer, .player-score, .computer-score{
+    display: flex;
+    gap: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+
+.visible{
+    display: flex;
+}
