@@ -1,23 +1,11 @@
 
 
 
-// Randomize computer choice
-function getComputerChoice () {
-    let choices = ["Rock", "Paper", "Scissors"];
-    
-    return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// Human Choice Input
-function getHumanChoice () {
-    let input = prompt("Choice :");
-    return input;
-}
 
 
 
-const humanSelective = getHumanChoice();
-const computerSelective = getComputerChoice();
+
+
 
     
 // Declare player scores
@@ -26,6 +14,22 @@ let computerScore = 0;
 
 
 function playGame(){
+
+    // Randomize computer choice
+    function getComputerChoice () {
+        let choices = ["Rock", "Paper", "Scissors"];
+        
+        return choices[Math.floor(Math.random() * choices.length)];
+    }
+
+    // Human Choice Input
+    function getHumanChoice () {
+        let input = prompt("Choice :");
+        return input;
+    }
+
+    const humanSelective = getHumanChoice();
+const computerSelective = getComputerChoice();
     // Single Round
     function playRound (humanChoice, computerChoice) {
         let human = humanChoice.toLowerCase();
@@ -56,7 +60,9 @@ function playGame(){
     return playRound(humanSelective, computerSelective);
 }
 
-playGame();
+for (let i =0;i<= 5; i++){
+    playGame();
+}
 
 
 
