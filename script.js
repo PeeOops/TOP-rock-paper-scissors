@@ -76,7 +76,6 @@ function gameResult () {
 
 rockBtn.addEventListener("click" , () => {
     let playerChoice = rockBtn.textContent;
-    console.log(playerChoice)
     let computerChoice = getComputerChoice();
     round++;
     playRound(playerChoice,computerChoice);
@@ -84,7 +83,6 @@ rockBtn.addEventListener("click" , () => {
 
 paperBtn.addEventListener("click", () => {
     let playerChoice = paperBtn.textContent;
-    console.log(playerChoice)
     let computerChoice = getComputerChoice();
     round++;
     playRound(playerChoice,computerChoice);
@@ -92,7 +90,6 @@ paperBtn.addEventListener("click", () => {
 
 scissorsBtn.addEventListener("click", () => {
     let playerChoice = scissorsBtn.textContent;
-    console.log(playerChoice)
     let computerChoice = getComputerChoice();
     round++;
     playRound(playerChoice,computerChoice);
