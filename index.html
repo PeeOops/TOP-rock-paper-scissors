@@ -6,50 +6,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="box">
+    <div class="box" >
         <!-- Rounds Display -->
-        <div class="game">
+        <div class="game" id="round-screen">
             <h1>Rock, Paper, Scissors</h1>
             <h3>Player vs Computer</h3>
             <!-- Rounds -->
             <div class="round">
                 <p>Round :</p>
-                <p id="round">5</p>
+                <p id="round">-<p>
             </div>
             <!-- Player Choice -->
             <div class="choices">
                 <button id="rock">Rock</button>
                 <button id="paper">Paper</button>
                 <button id="scissors">Scissors</button>
+
             </div>
             <div class="player">
                 <p>Player :</p>
-                <p>Rock</p>
+                <p id="player-choice">-</p>
             </div>
             <div class="computer">
                 <p>Computer :</p>
-                <p>Paper</p>
+                <p id="computer-choice">-</p>
             </div>
-            <p style="font-weight: bold;">Player lose! Paper beats rock</p>    
+            <p style="font-weight: bold;" id="round-result"></p>
+            <button class="result-button" id="result-button">Result</button>    
         </div>
 
         <!-- Gameover Display -->
-        <div class="gameover">
+        <div class="gameover" id="gameover-screen">
             <h1>Gameover</h1>
-            <h1>Congratulations!! You Win!!</h1>
+            <h1 id="game-result">Congratulations!! You Win!!</h1>
             <div class="player-score">
                 <p>Player Score:</p>
-                <p>4</p>
+                <p id="player-score">-</p>
             </div>
             <div class="computer-score">
                 <p>Computer Score:</p>
-                <p>1</p>
+                <p id="computer-score">-</p>
             </div>
+            <button class="restart" id="restart">Play Again?</button>
         </div>
         
     </div>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
     
 </body>
 </html>

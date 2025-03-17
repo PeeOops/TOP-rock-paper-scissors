@@ -44,7 +44,7 @@ body{
     margin-bottom: 20px;
 }
 
-.choices button{
+.choices button, .result-button, .restart{
     background-color: gray;
     color: white;
     border: none;
@@ -55,8 +55,25 @@ body{
     cursor: pointer;
 }
 
+.result-button{
+    display: none;
+}
+
+
+.button-show{
+    display: block;
+}
+
 .player, .computer, .player-score, .computer-score{
     display: flex;
     gap: 5px;
 }
 
+.hide{
+    display: none;
+}
+
+
+.visible{
+    display: flex;
+}
